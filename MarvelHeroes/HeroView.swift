@@ -29,11 +29,12 @@ class HeroView: UIView {
         
         heroImage.image = UIImage(named: "iron-man.jpg")
         
-        heroImage.translatesAutoresizingMaskIntoConstraints = false
-        heroImage.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        heroImage.topAnchor.constraint(equalTo: heroName.bottomAnchor, constant: 10).isActive = true
-        heroImage.widthAnchor.constraint(equalTo: self.widthAnchor, constant: -20).isActive = true
+        heroImage.contentMode = .scaleAspectFit;
         
+        heroImage.translatesAutoresizingMaskIntoConstraints = false
+        heroImage.topAnchor.constraint(equalTo: heroName.bottomAnchor, constant: 10).isActive = true
+        heroImage.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        heroImage.heightAnchor.constraint(equalToConstant: 400).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {
